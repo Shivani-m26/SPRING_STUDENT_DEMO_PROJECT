@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="std" class="org.example.jdbc.Student" >
+<!--        inner bean only this std bean can use the bean spoort-->
+        <property name="sp" ref="sport">
+            <bean id="sport" class="org.example.jdbc.Sports"></bean>
+        </property>
+
+<!--        <property name="sports" ref="sport"></property>-->
+<!--        <property name="age" value="21"></property>-->
+<!--&lt;!&ndash;        how to set ref type&ndash;&gt;-->
+<!--        <property name="subject" ref="sub"></property>-->
+<!--        <constructor-arg index="1" ref="sub"></constructor-arg>-->
+<!--        <constructor-arg index="0" value="21"></constructor-arg>-->
+    </bean>
+<!--    <bean id="sub" class="org.example.jdbc.Subject" ></bean>-->
+    <bean id="sub" class="org.example.jdbc.Subject"  lazy-init="true"></bean>
+<!--    <bean id="sport" class="org.example.jdbc.Sports" primary="true"></bean>-->
+
+
+
+</beans>
+
+
+
+
