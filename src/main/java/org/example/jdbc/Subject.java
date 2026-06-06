@@ -1,7 +1,9 @@
 package org.example.jdbc;
 
 import org.example.jdbc.Lectures;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Subject implements Lectures {
 
     @Override

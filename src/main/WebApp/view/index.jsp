@@ -20,7 +20,7 @@
         <input type="number" id="age" name="age" required>
 
         <label for="focus">Focus Level (1-10)</label>
-        <input type="number" id="focus" name="focus" min="1" max="10" required>
+        <input type="number" id="focus" name="focus_level" min="1" max="10" required>
 
         <label for="distraction">Easily Distracted? (Yes/No)</label>
         <select id="distraction" name="distraction">
@@ -33,7 +33,6 @@
 
         <button type="submit">Submit</button>
     </form>
-    <text> Result is: ${result}</text>
 
 
 
